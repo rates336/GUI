@@ -1,4 +1,4 @@
-/*
+
 package com.company.gui1;
 
 
@@ -14,4 +14,4 @@ public class Leader extends Hero {
                 super.toString();
     }
 }
-*/
+

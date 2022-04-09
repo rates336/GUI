@@ -1,4 +1,4 @@
-/*
+
 package com.company.gui1;
 
 public class Main {
@@ -19,4 +19,4 @@ public class Main {
         System.out.println(s);
     }
 }
-*/
+

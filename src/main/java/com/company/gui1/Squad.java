@@ -1,4 +1,4 @@
-/*
+
 package com.company.gui1;
 
 public class Squad {
@@ -19,4 +19,4 @@ public class Squad {
         counter++;
     }
 }
-*/
+
