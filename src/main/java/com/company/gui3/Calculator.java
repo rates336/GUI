@@ -8,9 +8,11 @@ import static java.lang.Math.*;
 
 public class Calculator <T extends  Number> {
     T number;
+    T number2;
 
-    public Calculator(T number) {
+    public Calculator(T number, T number2) {
         this.number = number;
+        this.number2 = number2;
     }
 
 /*    public static <T extends  Number> void calculate(T number) {
@@ -18,56 +20,10 @@ public class Calculator <T extends  Number> {
         System.out.println(result);
     }*/
     public void calculate() {
-        double result = pow(number.doubleValue(), 2);
-        System.out.println(result);
+        System.out.println(number.doubleValue() * number2.doubleValue());
     }
 
-    public static void main(String[] args) {
-    Calculator<Double> theCalc = new Calculator<>(31.31);
-    theCalc.calculate();
-    ICalc myAdd = (a, b) -> {
-        double result = a + b;
-        System.out.println(result);
-        return result;
-    };
-    ICalc mySubtract = (a, b) -> {
-        double result = a - b;
-        System.out.println(result);
-        return result;
-    };
-    ICalc myMultiply = (a, b) -> {
-        double result = a * b;
-        System.out.println(result);
-        return result;
-    };
-    ICalc myDivide = (a, b) -> {
-        double result = a / b;
-        System.out.println(result);
-        return result;
-    };
-    myAdd.calcDouble(31, 98.3);
-    mySubtract.calcDouble(31, 98.3);
-    myMultiply.calcDouble(31, 98.3);
-    myDivide.calcDouble(31, 98.3);
 
-    TheRandClass someName = new TheRandClass();
-    someName.listFiller(10);
-        for (int i = 0; i < someName.theList.size(); i++) {
-            System.out.println(someName.theList.get(i));
-        }
-        for (int i = 0; i < calculate(someName.theList, myAdd).size(); i++) {
-            System.out.println("ICalc value: ");
-        }
-
-    }
-
-    public static List<Double> calculate(List<Double> list, ICalc iCalc) {
-        List<Double> resultList = new LinkedList<>();
-        for (int i = 0; i < list.size() / 2; i+=2) {
-            resultList.add(iCalc.calcDouble(i, i+1));
-        }
-        return resultList;
-    }
 
 
 }
